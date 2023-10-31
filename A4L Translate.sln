@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34202.233
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "A4L Translate", "A4L Translate.csproj", "{30102577-0861-45E5-8423-72458112E2D8}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Anime4Life Deepl Translate", "..\Anime4Life Deepl Translate\Anime4Life Deepl Translate.vdproj", "{9B38EC15-679F-4D15-BACD-9C54A47BBCB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{30102577-0861-45E5-8423-72458112E2D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30102577-0861-45E5-8423-72458112E2D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30102577-0861-45E5-8423-72458112E2D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30102577-0861-45E5-8423-72458112E2D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B38EC15-679F-4D15-BACD-9C54A47BBCB1}.Debug|Any CPU.ActiveCfg = Debug
+		{9B38EC15-679F-4D15-BACD-9C54A47BBCB1}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7238E51C-D00D-4ED3-92FB-2927029624BA}
+	EndGlobalSection
+EndGlobal
