@@ -58,11 +58,15 @@ namespace A4L_Translate
                 translator = new Translator(authKey);
                 progress_translate.Maximum = 100;
                 progress_translate.Minimum = 0;
-                string[] lines = File.ReadAllLines(Filepath);
+                string[] lines = File.ReadAllLines(Filepath, Encoding.UTF8); // Asigură citirea în UTF-8
                 int countLines = lines.Count();
                 int nrLine = 0;
                 foreach (string line in lines)
                 {
+                    if (line.Length == 0)
+                    {
+                        continue;
+                    }
                     await PushLineToWriterAsync(line);
                     nrLine++;
                     decimal progress = nrLine * 95 / countLines;
@@ -90,6 +94,14 @@ namespace A4L_Translate
                 string[] lineSplited = line.Split(new string[] { ",," },StringSplitOptions.None);
 
                 string subtitle_en = CleanSubLine(lineSplited[lineSplited.Length - 1]);
+                if(subtitle_en == null)
+                {
+                    return;
+                }
+                if (subtitle_en.Length == 0)
+                {
+                    return;
+                }
                 string[] lineSplitedWithoutSub = lineSplited.SkipLast(1).ToArray();
                 string subtitle_info = lineSplited[0];
                 string[] subtitle_info_splited = subtitle_info.Split(new char[] { ',' }, StringSplitOptions.None);
@@ -130,7 +142,7 @@ namespace A4L_Translate
                 if (saveFileDialog.ShowDialog() == true)
                 {
                     var stringSub = sb.ToString();
-                    byte[] subBytes = Encoding.UTF8.GetBytes(stringSub);
+                    byte[] subBytes = Encoding.Default.GetBytes(stringSub); // Scriere în ANSI
                     using (MemoryStream ms = new MemoryStream(subBytes))
                     {
                         using (FileStream fileStream = new FileStream(saveFileDialog.FileName, FileMode.Create, System.IO.FileAccess.Write))

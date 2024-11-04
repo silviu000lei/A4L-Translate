@@ -16,6 +16,7 @@
         <Button x:Name="translate" Content="Translate" IsEnabled="False" HorizontalAlignment="Left" Margin="305,101,0,0" VerticalAlignment="Top" Background="#FF00A4A0" Height="35" Width="150" Foreground="White" FontFamily="Arial" FontSize="20" FontWeight="Bold" Click="Translate_Click"/>
         <Button x:Name="Download" IsEnabled="False" Content="Download File" HorizontalAlignment="Left" Margin="566,101,0,0" VerticalAlignment="Top" Height="35" Width="150" Background="#FF10A219" Foreground="White" FontFamily="Arial" FontWeight="Bold" FontSize="20" Click="Download_Click"/>
         <ProgressBar x:Name="progress_translate" HorizontalAlignment="Left" Height="25" Margin="60,217,0,0" VerticalAlignment="Top" Width="654"/>
+        <Label Content="Version 1.0.0" HorizontalAlignment="Left" Margin="641,400,0,0" VerticalAlignment="Top" Height="24" Width="149"/>
 
     </Grid>
 </Window>
