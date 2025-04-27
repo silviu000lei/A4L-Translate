@@ -68,6 +68,7 @@ namespace A4L_Translate
                         continue;
                     }
                     await PushLineToWriterAsync(line);
+                    System.Threading.Thread.Sleep(200); // 200 milisecunde = 0.2 secunde
                     nrLine++;
                     decimal progress = nrLine * 95 / countLines;
                     progress_translate.Value = (int)Math.Floor(progress);
